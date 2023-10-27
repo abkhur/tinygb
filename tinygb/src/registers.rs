@@ -5,7 +5,7 @@ struct Registers {
     c: u8,
     d: u8,
     e: u8,
-    f: u8,
+    f: FlagsRegister,
     h: u8,
     l: u8,
 }
