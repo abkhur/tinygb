@@ -10,4 +10,14 @@ struct Registers {
     l: u8,
 }
 
-impl
+impl Registers {
+    fn get_bc(&self) -> u16 {
+        self.b = ((value & 0xFF00) >> 8) as u8;
+        self.c = (value & 0xFF) as u8;
+    }
+
+    fn set_bc(&mut self, value: u16) {
+        self.b = ((value & 0xFF00) >> 8) as u8;
+        self.c = (value & 0xFF) as u8;
+    }
+}
